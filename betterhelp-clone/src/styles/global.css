@@ -1,0 +1,12 @@
+/* Global styles and custom design changes: soft gradients, rounded cards */
+:root{
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --primary:#6c5ce7; /* changed color from BetterHelp teal to soft violet */
+  --accent:#00b894;
+  --muted:#6b7280;
+}
+html,body,#root{height:100%;}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,var(--bg),#f0f4ff); color:#1f2937}
+a{color:var(--primary); text-decoration:none}
+button{font-family:inherit}
