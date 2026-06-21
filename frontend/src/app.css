@@ -729,6 +729,30 @@
   border-bottom: 1px solid var(--border);
   padding: 14px 40px 12px;
 }
+
+/* Top banner image for the landing page */
+.landing-top-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 24px;
+  background: var(--surface-raised);
+}
+.landing-top-banner img {
+  width: 100%;
+  max-width: 1180px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  display: block;
+}
+@media (max-width: 760px) {
+  .landing-top-banner img {
+    height: 200px;
+    border-radius: 10px;
+  }
+}
 .landing-slider__track {
   max-width: 900px;
   margin: 0 auto;

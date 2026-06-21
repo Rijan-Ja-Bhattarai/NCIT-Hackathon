@@ -85,7 +85,10 @@ export default function LandingPage() {
         </div>
       </header>
 
-      
+      <div className="landing-top-banner" role="img" aria-label="Peaceful landscape">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80" alt="Peaceful sunrise over a field" />
+      </div>
+
       <main className="landing-hero">
         <p className="eyebrow">a quiet place to talk</p>
         <h1 className="landing-hero__title">
