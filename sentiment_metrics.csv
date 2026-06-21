@@ -1,0 +1,8 @@
+timestamp,character_id,label,input_chars,token_count,tokenization_ms,inference_ms,total_ms,model,device,model_load_ms
+2026-06-21T07:58:51.050897+00:00,miku,negative,14,6,1.086,162.456,163.786,cardiffnlp/twitter-roberta-base-sentiment,cuda,8213.346
+2026-06-21T07:58:53.173337+00:00,miku,negative,14,6,0.21,2.98,3.463,cardiffnlp/twitter-roberta-base-sentiment,cuda,12783.382
+2026-06-21T08:05:23.951191+00:00,miku,positive,39,12,1.277,157.597,159.167,cardiffnlp/twitter-roberta-base-sentiment,cuda,5733.187
+2026-06-21T08:05:27.271739+00:00,miku,positive,39,12,0.234,4.042,4.576,cardiffnlp/twitter-roberta-base-sentiment,cuda,5660.872
+2026-06-21T08:08:25.366981+00:00,miku,neutral,5,3,0.393,6.535,44.884,cardiffnlp/twitter-roberta-base-sentiment,cuda,5733.187
+2026-06-21T08:08:26.467809+00:00,miku,neutral,5,3,0.164,3.615,4.038,cardiffnlp/twitter-roberta-base-sentiment,cuda,5660.872
+2026-06-21T09:12:30.343139+00:00,miku,neutral,5,3,0.183,2.914,3.351,cardiffnlp/twitter-roberta-base-sentiment,cuda,3965.954
