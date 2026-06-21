@@ -21,16 +21,16 @@ function resolveCharacterArt(character) {
 function BannerSlider() {
   const slides = [
     {
-      src: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1400&q=80',
-      alt: 'Therapist and client having a warm, supportive conversation',
+      src: 'https://kdham.com/wp-content/uploads/2013/10/meditation-2.jpg',
+      alt: 'Person meditating peacefully indoors with soft light',
     },
     {
-      src: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1400&q=80',
-      alt: 'Illustration of a brain symbolizing mental health and wellbeing',
+      src: 'https://previews.123rf.com/images/stockgiu/stockgiu1711/stockgiu171100633/89538381-brain-cartoon-of-mental-health-theme-isolated-design-vector-illustration.jpg',
+      alt: 'Illustration of a brain representing mental health and wellbeing',
     },
     {
-      src: 'https://images.unsplash.com/photo-1509099836639-18ba2f5c6f3b?auto=format&fit=crop&w=1400&q=80',
-      alt: 'Person meditating outdoors in a calm, natural setting',
+      src: 'https://cmha.ca/wp-content/uploads/2023/03/MicrosoftTeams-image-5.png',
+      alt: 'Supportive group and mental health resources illustration',
     },
   ]
 
