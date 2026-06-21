@@ -36,52 +36,58 @@ function LandingSlider() {
 
   return (
     <section className="landing-slider" aria-label="Highlights">
-      <div className="landing-slider__track" style={{ transform: `translateX(-${active * (100 / slides.length)}%)`, width: `${slides.length * 100}%` }}>
-        {slides.map((slide, idx) => (
-          <div
-            className="landing-slider__slide"
-            key={idx}
-            style={
-              slide.image
-                ? { backgroundImage: `url('${slide.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }
-                : undefined
-            }
-            aria-hidden={idx !== active}
-          >
-            <div className="landing-slider__overlay">
-              <span className={`landing-slider__badge landing-slider__badge--${slide.type}`}>
-                {slide.label}
-              </span>
-              <p className="landing-slider__title">{slide.title}</p>
-              <p className="landing-slider__desc">{slide.description}</p>
+      <div className="landing-slider__inner">
+        <div className="landing-slider__track" style={{ transform: `translateX(-${active * 100}%)`, width: `${slides.length * 100}%` }}>
+          {slides.map((slide, idx) => (
+            <div
+              className="landing-slider__slide"
+              key={idx}
+              aria-hidden={idx !== active}
+            >
+              <div
+                className="landing-slide__media"
+                style={slide.image ? { backgroundImage: `url('${slide.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
+              />
+
+              <div className="landing-slide__body">
+                <div className="landing-slider__overlay">
+                  <span className={`landing-slider__badge landing-slider__badge--${slide.type}`}>
+                    {slide.label}
+                  </span>
+                  <h3 className="landing-slider__title">{slide.title}</h3>
+                  <p className="landing-slider__desc">{slide.description}</p>
+                </div>
+              </div>
             </div>
+          ))}
+        </div>
+
+        <div className="landing-slider__controls">
+          <button className="landing-slider__nav landing-slider__nav--prev" aria-label="Previous slide" onClick={prev}>
+            ‹
+          </button>
+          <div className="landing-slider__dots" role="tablist" aria-label="Slide navigation">
+            {slides.map((item, index) => (
+              <button
+                key={item.title}
+                type="button"
+                role="tab"
+                aria-selected={index === active}
+                aria-label={`Slide ${index + 1}: ${item.title}`}
+                className={`landing-slider__dot${index === active ? ' landing-slider__dot--active' : ''}`}
+                onClick={() => setActive(index)}
+              />
+            ))}
           </div>
-        ))}
-      </div>
-
-      <button className="landing-slider__nav landing-slider__nav--prev" aria-label="Previous slide" onClick={prev}>
-        ‹
-      </button>
-      <button className="landing-slider__nav landing-slider__nav--next" aria-label="Next slide" onClick={next}>
-        ›
-      </button>
-
-      <div className="landing-slider__dots" role="tablist" aria-label="Slide navigation">
-        {slides.map((item, index) => (
-          <button
-            key={item.title}
-            type="button"
-            role="tab"
-            aria-selected={index === active}
-            aria-label={`Slide ${index + 1}: ${item.title}`}
-            className={`landing-slider__dot${index === active ? ' landing-slider__dot--active' : ''}`}
-            onClick={() => setActive(index)}
-          />
-        ))}
+          <button className="landing-slider__nav landing-slider__nav--next" aria-label="Next slide" onClick={next}>
+            ›
+          </button>
+        </div>
       </div>
     </section>
   )
 }
+
 
 function CompanionCard({ character, ctaTo }) {
   const art = resolveCharacterArt(character)
