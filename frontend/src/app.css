@@ -730,32 +730,73 @@
   padding: 14px 40px 12px;
 }
 
-/* Top banner image for the landing page */
-.landing-top-banner {
+/* Top banner slider for the landing page */
+.landing-top-banner-slider {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px 24px;
   background: var(--surface-raised);
+  display: flex;
+  justify-content: center;
 }
-.landing-top-banner img {
+.landing-top-banner-inner {
   width: 100%;
   max-width: 1180px;
+  position: relative;
+}
+.landing-banner__viewport {
+  position: relative;
+  width: 100%;
   height: 320px;
-  object-fit: cover;
-  object-position: center center;
+  overflow: hidden;
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
-  display: block;
-  margin: 0 auto;
 }
+.landing-banner__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+.landing-banner__img--active {
+  opacity: 1;
+  transform: scale(1);
+}
+.landing-banner__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+.landing-banner__nav--prev { left: 12px; }
+.landing-banner__nav--next { right: 12px; }
+
+.landing-banner__controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+.landing-banner__dots { display:flex; gap:12px; }
+.landing-banner__dot { width:12px; height:12px; border-radius:50%; background:rgba(0,0,0,0.12); border:none; cursor:pointer; }
+.landing-banner__dot--active { background: var(--primary); transform: scale(1.15); }
+
 @media (max-width: 760px) {
-  .landing-top-banner img {
-    height: 200px;
-    border-radius: 10px;
-  }
+  .landing-banner__viewport { height: 200px; }
 }
+
 .landing-slider__track {
   max-width: 900px;
   margin: 0 auto;

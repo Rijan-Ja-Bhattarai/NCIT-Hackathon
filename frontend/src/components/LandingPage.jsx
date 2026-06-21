@@ -18,6 +18,71 @@ function resolveCharacterArt(character) {
 
 
 
+function BannerSlider() {
+  const slides = [
+    {
+      src: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1400&q=80',
+      alt: 'Therapist and client having a warm, supportive conversation',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1400&q=80',
+      alt: 'Illustration of a brain symbolizing mental health and wellbeing',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1509099836639-18ba2f5c6f3b?auto=format&fit=crop&w=1400&q=80',
+      alt: 'Person meditating outdoors in a calm, natural setting',
+    },
+  ]
+
+  const [active, setActive] = useState(0)
+
+  useEffect(() => {
+    const t = setInterval(() => setActive((s) => (s + 1) % slides.length), 5000)
+    return () => clearInterval(t)
+  }, [slides.length])
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') setActive((s) => (s - 1 + slides.length) % slides.length)
+      if (e.key === 'ArrowRight') setActive((s) => (s + 1) % slides.length)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [slides.length])
+
+  return (
+    <div className="landing-top-banner-inner">
+      <div className="landing-banner__viewport" aria-hidden={false}>
+        {slides.map((slide, i) => (
+          <img
+            key={i}
+            className={`landing-banner__img${i === active ? ' landing-banner__img--active' : ''}`}
+            src={slide.src}
+            alt={slide.alt}
+            aria-hidden={i === active ? 'false' : 'true'}
+          />
+        ))}
+        <button className="landing-banner__nav landing-banner__nav--prev" aria-label="Previous" onClick={() => setActive((s) => (s - 1 + slides.length) % slides.length)}>‹</button>
+        <button className="landing-banner__nav landing-banner__nav--next" aria-label="Next" onClick={() => setActive((s) => (s + 1) % slides.length)}>›</button>
+      </div>
+
+      <div className="landing-banner__controls">
+        <div className="landing-banner__dots" role="tablist" aria-label="Banner slides">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              className={`landing-banner__dot${idx === active ? ' landing-banner__dot--active' : ''}`}
+              aria-label={`Slide ${idx + 1}`}
+              aria-selected={idx === active}
+              onClick={() => setActive(idx)}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function CompanionCard({ character, ctaTo }) {
   const art = resolveCharacterArt(character)
   const initial = (character.name?.[0] || character.id[0] || '?').toUpperCase()
@@ -85,9 +150,10 @@ export default function LandingPage() {
         </div>
       </header>
 
-      <div className="landing-top-banner" role="img" aria-label="Therapy session: supportive conversation">
-        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1400&q=80" alt="Therapist and client having a warm, supportive conversation" />
-      </div>
+      {/* Banner slider: therapy, brain, meditation */}
+      <section className="landing-top-banner-slider" aria-label="Highlights" tabIndex={0}>
+        <BannerSlider />
+      </section>
 
       <main className="landing-hero">
         <p className="eyebrow">a quiet place to talk</p>
