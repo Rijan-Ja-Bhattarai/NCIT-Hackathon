@@ -100,7 +100,7 @@ class SentimentAnalysis:
         self.text = text
         return self.polarity_scores(text, character_id=character_id, return_metrics=return_metrics)
 
-    def polarity_scores(self, text: str, character_id: str = None, return_metrics: bool = False):
+    def polarity_scores(self, text: str, character_id: str = None, return_metrics: bool = False, log: bool = True):
         """
         Compute sentiment probabilities for the supplied text and log the result. When
         return_metrics=True, also return a metrics dict containing timing and token info.
@@ -142,8 +142,7 @@ class SentimentAnalysis:
 
         total_ms = (time.perf_counter() - t0) * 1000.0
 
-        # log sentiment and metrics
-        self._log(text, scores_dict, label, character_id)
+        # log sentiment and metrics (only if caller requests logging)
         metrics = {
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "character_id": character_id or "",
@@ -157,10 +156,12 @@ class SentimentAnalysis:
             "device": self.device,
             "model_load_ms": round(getattr(self, "model_load_ms", 0.0), 3),
         }
-        self._log_metrics(metrics)
+        if log:
+            self._log(text, scores_dict, label, character_id)
+            self._log_metrics(metrics)
 
         if return_metrics:
-            return scores_dict, metrics
+            return (scores_dict, metrics) if not log else (scores_dict, metrics)
         return scores_dict
 
     def classify(self, scores: dict):
