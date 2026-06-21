@@ -21,14 +21,14 @@ function resolveCharacterArt(character) {
 function BannerSlider() {
   const slides = [
     {
-      src: 'https://img.freepik.com/premium-vector/hand-drawn-illustration-world-mental-health-day_23-2149696689.jpg',
-      alt: 'Hand-drawn illustration for World Mental Health Day conveying calm and connection',
+      src: 'https://images.openai.com/static-rsc-4/2AnL4PMywBD7SQoV0--VvDwtxs_xThTw8Rdmu_2SxgxaY7f2oTcXPrxLnXCPjLhaxLXSqSTNZDyW_2-3sF-Wim2TPsN3-G8HxJhNzQIKUqCW5k2PGgH4UdYNdyZXQ9x68WTZ4UZ_6vjwGc1_ZSbzFiI063de5BJr3UQ7HetTg-SUsJZMPNT_7jvijY9Q9yuP?purpose=fullsize',
+      alt: 'Soothing meditation scene',
       objectPosition: 'center center'
     },
     {
-      src: 'https://static.vecteezy.com/system/resources/previews/047/790/662/non_2x/world-mental-health-day-girl-in-flowers-october-10th-illustration-of-a-girl-with-clear-thoughts-large-green-leaves-shades-green-brain-contour-is-calm-inscription-horizontally-vector.jpg',
-      alt: 'Illustration for World Mental Health Day: girl surrounded by calming leaves and flowers',
-      objectPosition: 'center 35%'
+      src: 'https://images.openai.com/static-rsc-4/x5ZAeZkYl4wsJRgM977gQ0jq4pj02An9KtYJDAR4DM5m8Pc2Rq1uQLGWwaBbCpr7Fk9EOGXHCekHZIRiCnP5DT1BZoH48qvweCbmuxVu4YofeESo7uMVM_luQAXnDsqsT4Ry_ZbBHDYAD_j3oi4NVq5GhbECu57HUySrLXr5pkJvDhae0np1FqdHnhG5S2kr?purpose=fullsize',
+      alt: 'Abstract calming illustration',
+      objectPosition: 'center 40%'
     },
     {
       src: 'https://cmha.ca/wp-content/uploads/2023/03/MicrosoftTeams-image-5.png',
