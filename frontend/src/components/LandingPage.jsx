@@ -27,10 +27,12 @@ function BannerSlider() {
     {
       src: 'https://static.vecteezy.com/system/resources/previews/047/790/662/non_2x/world-mental-health-day-girl-in-flowers-october-10th-illustration-of-a-girl-with-clear-thoughts-large-green-leaves-shades-green-brain-contour-is-calm-inscription-horizontally-vector.jpg',
       alt: 'Illustration for World Mental Health Day: girl surrounded by calming leaves and flowers',
+      objectPosition: 'center center'
     },
     {
       src: 'https://img.magnific.com/free-vector/hand-drawn-happy-black-woman-illustration_23-2149404965.jpg?semt=ais_hybrid&w=740&q=80',
       alt: 'Hand-drawn happy woman illustration conveying positive mental wellbeing',
+      objectPosition: 'center 22%'
     },
   ]
 
@@ -60,6 +62,7 @@ function BannerSlider() {
             src={slide.src}
             alt={slide.alt}
             aria-hidden={i === active ? 'false' : 'true'}
+            style={{ objectPosition: slide.objectPosition || 'center center' }}
           />
         ))}
         <button className="landing-banner__nav landing-banner__nav--prev" aria-label="Previous" onClick={() => setActive((s) => (s - 1 + slides.length) % slides.length)}>‹</button>
