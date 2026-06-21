@@ -3,45 +3,51 @@
   "sliderSlides": [
     {
       "type": "image",
-      "label": "Study",
-      "title": "Focused study sessions",
-      "description": "Tailored practice and step-by-step explanations to help you learn effectively.",
-      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80"
+      "label": "Support",
+      "title": "A calm conversation",
+      "description": "A therapist-style supportive conversation in a warm, inviting room.",
+      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80",
+      "alt": "A caring conversation between a therapist and a client in a softly lit room"
     },
     {
       "type": "image",
-      "label": "Study",
-      "title": "Exam revision made simple",
-      "description": "Quick revision plans and targeted practice for the topics that matter most.",
-      "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80"
+      "label": "Connection",
+      "title": "Friends supporting each other",
+      "description": "People offering comfort and companionship.",
+      "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=80",
+      "alt": "Two friends sitting close and supporting each other"
     },
     {
       "type": "image",
-      "label": "Study",
-      "title": "Personalized practice",
-      "description": "Adaptive exercises and helpful explanations — practice, get feedback, improve.",
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=80"
+      "label": "Reflection",
+      "title": "Journaling in peace",
+      "description": "Quiet moments with a journal and warm tea.",
+      "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1400&q=80",
+      "alt": "Person writing in a journal beside a cup of tea, sunlight streaming in"
     },
     {
-      "type": "value",
-      "label": "Core value",
-      "title": "Your wellbeing comes first",
-      "description": "Every companion is designed to listen without judgment and meet you where you are.",
-      "image": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1400&q=80"
+      "type": "image",
+      "label": "Mindfulness",
+      "title": "Meditation and breath",
+      "description": "Calm meditative practices in nature.",
+      "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1400&q=80",
+      "alt": "Person meditating on a peaceful lakeshore at sunrise"
     },
     {
-      "type": "value",
-      "label": "Core value",
-      "title": "Safe space, always",
-      "description": "We believe mental health support should feel approachable — not clinical or intimidating.",
-      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80"
+      "type": "image",
+      "label": "Nature",
+      "title": "Peaceful landscape",
+      "description": "Soft sunrise and open natural spaces to inspire hope.",
+      "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80",
+      "alt": "Warm sunrise over a calm field, soft colors and gentle light"
     },
     {
-      "type": "value",
-      "label": "Core value",
-      "title": "Growth at your pace",
-      "description": "Whether you need a laugh, a study session, or a quiet moment, you set the tone.",
-      "image": "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1400&q=80"
+      "type": "image",
+      "label": "Comfort",
+      "title": "Cozy, healing spaces",
+      "description": "Warm indoor scenes with soft lighting and comfort.",
+      "image": "https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?auto=format&fit=crop&w=1400&q=80",
+      "alt": "A cozy living area with warm lighting, a cup of tea, and soft textiles"
     }
   ],
   "feedback": [
