@@ -22,9 +22,4 @@ export const CHARACTER_ART = {
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJE6xOQuW032-JgEo19_d1g2EhaPuKteOS3wUZNfAOp7ZEX5ZjBYCNa_U&s=10',
     avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSWeuYnbXbNnULzNUt5k2x91FXIUsEO7IAG0uCaOX5-GlmiDpQsHGacE8&s=10',
   },
-  goku: {
-    tagline: 'Easygoing motivation, one step at a time.',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS4MQdFmHkdFyVzPveW5QpsuCzn6uAvly4yy3LoHhbxtgD7vKYzNpUphgW&s=10',
-    avatar: 'https://www.slashfilm.com/img/gallery/dragon-ball-how-old-is-goku-in-every-anime-series/l-intro-1751318952.jpg',
-  },
 }

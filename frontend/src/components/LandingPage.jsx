@@ -66,7 +66,7 @@ export default function LandingPage() {
   return (
     <div className="landing-page">
       <header className="landing-nav">
-        <span className="landing-nav__brand">dEMO</span>
+        <span className="landing-nav__brand">dAy_2</span>
         <div className="landing-nav__actions">
           {isAuthenticated ? (
             <Link className="btn-pill" to="/characters">
