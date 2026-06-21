@@ -64,12 +64,14 @@ class Character:
         sentiment = _get_sentiment()
         try:
             if sentiment is not None and isinstance(user_message, str):
-            # compute sentiment but avoid double-logging when outer caller already logs
-            scores = sentiment.polarity_scores(user_message, character_id=session_id or self.character_name, log=False)
-            # delta positive->negative; increase bias when negative outweighs positive
-            delta = scores.get("negative", 0.0) - scores.get("positive", 0.0)
-            # scaled update; small positive drift when negative dominates
-            self.empathy_bias = min(1.0, max(0.0, self.empathy_bias + (delta * 0.5)))
+                # compute sentiment but avoid double-logging when outer caller already logs
+                scores = sentiment.polarity_scores(
+                    user_message, character_id=session_id or self.character_name, log=False
+                )
+                # delta positive->negative; increase bias when negative outweighs positive
+                delta = scores.get("negative", 0.0) - scores.get("positive", 0.0)
+                # scaled update; small positive drift when negative dominates
+                self.empathy_bias = min(1.0, max(0.0, self.empathy_bias + (delta * 0.5)))
         except Exception:
             # sentiment model failed — continue without it
             pass
