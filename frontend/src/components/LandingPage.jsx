@@ -31,10 +31,11 @@ function BannerSlider() {
       objectPosition: 'center 35%'
     },
     {
-      src: 'https://img.magnific.com/free-vector/hand-drawn-happy-black-woman-illustration_23-2149404965.jpg?semt=ais_hybrid&w=740&q=80',
-      alt: 'Hand-drawn happy woman illustration conveying positive mental wellbeing',
+      src: 'https://cmha.ca/wp-content/uploads/2023/03/MicrosoftTeams-image-5.png',
+      alt: 'Supportive group and mental health resources illustration',
       objectPosition: 'center 45%'
     },
+
   ]
 
   const [active, setActive] = useState(0)
