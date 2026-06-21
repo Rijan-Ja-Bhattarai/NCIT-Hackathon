@@ -44,7 +44,7 @@ export default function LoginPage() {
         </Link>
 
         <p className="eyebrow">welcome back</p>
-        <h1 className="auth-card__title">Sign in to dEMO</h1>
+        <h1 className="auth-card__title">Sign in to dAy_2</h1>
         <p className="auth-card__subtitle">
           Use any username and password to enter the demo. Your session stays on this device.
         </p>

@@ -31,8 +31,8 @@ function BannerSlider() {
       objectPosition: 'center 40%'
     },
     {
-      src: 'https://cmha.ca/wp-content/uploads/2023/03/MicrosoftTeams-image-5.png',
-      alt: 'Supportive group and mental health resources illustration',
+      src: 'https://static.vecteezy.com/system/resources/previews/047/790/662/non_2x/world-mental-health-day-girl-in-flowers-october-10th-illustration-of-a-girl-with-clear-thoughts-large-green-leaves-shades-green-brain-contour-is-calm-inscription-horizontally-vector.jpg',
+      alt: 'Illustration of a calm girl surrounded by flowers and leaves',
       objectPosition: 'center 45%'
     },
 
@@ -168,7 +168,7 @@ export default function LandingPage() {
           with your companion.
         </h1>
         <p className="landing-hero__subtitle">
-          dEMO pairs you with AI characters for open-ended chats — playful, reflective, or
+          dAy_2 pairs you with AI characters for open-ended chats — playful, reflective, or
           just someone to listen. Pick who you want to talk to and say hello.
         </p>
         <div className="landing-hero__cta">
@@ -200,7 +200,7 @@ export default function LandingPage() {
         <div className="landing-learn__inner">
           <h2 className="landing-learn__title">Learn real subjects, with minimal errors</h2>
           <p className="landing-learn__text">
-            Students use dEMO companions to study maths, science, languages, and more. Our models
+            Students use dAy_2 companions to study maths, science, languages, and more. Our models
             are tuned for clear explanations and accurate answers — so you can revise, ask follow-up
             questions, and actually understand the material, not just memorize it.
           </p>
@@ -237,7 +237,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="landing-footer">
-        <p>dEMO — Hackathon demo</p>
+        <p>dAy_2 — Hackathon demo</p>
       </footer>
     </div>
   )
