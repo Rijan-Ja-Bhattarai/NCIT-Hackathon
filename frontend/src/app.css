@@ -759,13 +759,12 @@
   object-fit: cover;
   object-position: center center;
   opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 600ms ease, transform 600ms ease;
+  transition: opacity 600ms ease;
 }
 .landing-banner__img--active {
   opacity: 1;
-  transform: scale(1);
 }
+
 .landing-banner__nav {
   position: absolute;
   top: 50%;

@@ -27,12 +27,12 @@ function BannerSlider() {
     {
       src: 'https://static.vecteezy.com/system/resources/previews/047/790/662/non_2x/world-mental-health-day-girl-in-flowers-october-10th-illustration-of-a-girl-with-clear-thoughts-large-green-leaves-shades-green-brain-contour-is-calm-inscription-horizontally-vector.jpg',
       alt: 'Illustration for World Mental Health Day: girl surrounded by calming leaves and flowers',
-      objectPosition: 'center center'
+      objectPosition: 'center 35%'
     },
     {
       src: 'https://img.magnific.com/free-vector/hand-drawn-happy-black-woman-illustration_23-2149404965.jpg?semt=ais_hybrid&w=740&q=80',
       alt: 'Hand-drawn happy woman illustration conveying positive mental wellbeing',
-      objectPosition: 'center 22%'
+      objectPosition: 'center 45%'
     },
   ]
 
