@@ -85,8 +85,8 @@ export default function LandingPage() {
         </div>
       </header>
 
-      <div className="landing-top-banner" role="img" aria-label="Comforting scene: journaling with warm tea">
-        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1400&q=80" alt="Person journaling by a window with a warm cup of tea" />
+      <div className="landing-top-banner" role="img" aria-label="Therapy session: supportive conversation">
+        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1400&q=80" alt="Therapist and client having a warm, supportive conversation" />
       </div>
 
       <main className="landing-hero">
