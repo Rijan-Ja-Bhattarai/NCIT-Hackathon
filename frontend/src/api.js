@@ -30,3 +30,8 @@ export async function sendChatMessage(characterId, message) {
   })
   return asJson(res) // { reply, sentiment: { label, scores } }
 }
+
+export async function fetchMetrics(limit = 100) {
+  const res = await fetch(`/api/metrics?limit=${encodeURIComponent(limit)}`)
+  return asJson(res)
+}

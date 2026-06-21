@@ -16,6 +16,9 @@ Endpoints:
   POST /api/chat
       body: {"characterId": "<key in CHARACTERS>", "message": "..."}
       -> {"reply": "...", "sentiment": {"label": "...", "scores": {...}}}
+
+  GET /api/metrics
+      -> {"metrics": [...recent rows...], "summary": {...aggregates...}}
 """
 
 import os
@@ -101,6 +104,63 @@ def chat_endpoint():
         "reply": reply,
         "sentiment": {"label": label, "scores": scores},
     })
+
+
+@app.route('/api/metrics', methods=["GET"])
+def metrics_endpoint():
+    """Return recent sentiment metrics and simple aggregates.
+
+    Query params:
+      limit (int) - number of recent rows to return (default 100)
+    """
+    import csv
+    import statistics
+
+    path = os.environ.get("SENTIMENT_METRICS_PATH", "sentiment_metrics.csv")
+    try:
+        limit = int(request.args.get("limit", 100))
+    except Exception:
+        limit = 100
+
+    if not os.path.exists(path):
+        return jsonify({"metrics": [], "summary": {}})
+
+    rows = []
+    try:
+        with open(path, newline='') as fh:
+            reader = csv.DictReader(fh)
+            for r in reader:
+                # safe numeric parsing
+                for k in ["tokenization_ms", "inference_ms", "total_ms", "token_count", "model_load_ms"]:
+                    if k in r and r[k] != "":
+                        try:
+                            r[k] = float(r[k])
+                        except Exception:
+                            r[k] = None
+                    else:
+                        r[k] = None
+                rows.append(r)
+    except Exception:
+        app.logger.exception("Failed to read metrics CSV")
+        return jsonify({"metrics": [], "summary": {}}), 500
+
+    # keep most recent rows
+    recent = rows[-limit:]
+
+    def mean_safe(values):
+        vals = [v for v in values if v is not None]
+        return float(statistics.mean(vals)) if vals else None
+
+    summary = {
+        "count": len(rows),
+        "avg_tokenization_ms": mean_safe([r.get("tokenization_ms") for r in rows]),
+        "avg_inference_ms": mean_safe([r.get("inference_ms") for r in rows]),
+        "avg_total_ms": mean_safe([r.get("total_ms") for r in rows]),
+        "avg_token_count": mean_safe([r.get("token_count") for r in rows]),
+        "avg_model_load_ms": mean_safe([r.get("model_load_ms") for r in rows]),
+    }
+
+    return jsonify({"metrics": recent, "summary": summary})
 
 
 if __name__ == "__main__":

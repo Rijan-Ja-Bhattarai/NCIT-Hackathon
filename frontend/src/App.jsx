@@ -7,6 +7,7 @@ import LoginPage from './components/LoginPage.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 import { fetchCharacters } from './api.js'
 import './app.css'
+import MetricsDashboard from './components/MetricsDashboard.jsx'
 
 function CharactersPage() {
   const navigate = useNavigate()
@@ -104,6 +105,14 @@ export default function App() {
           element={
             <ProtectedRoute>
               <ChatPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/metrics"
+          element={
+            <ProtectedRoute>
+              <MetricsDashboard />
             </ProtectedRoute>
           }
         />
