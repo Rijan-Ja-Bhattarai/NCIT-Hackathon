@@ -21,8 +21,8 @@ function resolveCharacterArt(character) {
 function BannerSlider() {
   const slides = [
     {
-      src: 'https://cdn.prod.website-files.com/682adf069bd943a086d55998/6850dffdbedf8fdca7c45d71_mental%20fitness.png',
-      alt: 'Mental fitness illustration showing calm focus and wellbeing',
+      src: 'https://img.freepik.com/premium-vector/hand-drawn-illustration-world-mental-health-day_23-2149696689.jpg',
+      alt: 'Hand-drawn illustration for World Mental Health Day conveying calm and connection',
       objectPosition: 'center center'
     },
     {
