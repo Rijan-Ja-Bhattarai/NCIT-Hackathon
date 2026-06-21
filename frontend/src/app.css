@@ -920,6 +920,21 @@
   margin: 0;
   color: var(--dark-gray);
 }
+
+/* Force pagination dots below slider images (override any conflicting rules) */
+.landing-slider__controls {
+  position: static !important;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+  margin-top: 12px;
+  pointer-events: auto;
+}
+
+/* Ensure nav arrows can sit visually inside the slider without being clipped */
+.landing-slider__inner {
+  overflow: visible;
+}
 .landing-companions__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
