@@ -21,8 +21,9 @@ function resolveCharacterArt(character) {
 function BannerSlider() {
   const slides = [
     {
-      src: 'https://kdham.com/wp-content/uploads/2013/10/meditation-2.jpg',
-      alt: 'Person meditating peacefully indoors with soft light',
+      src: 'https://cdn.prod.website-files.com/682adf069bd943a086d55998/6850dffdbedf8fdca7c45d71_mental%20fitness.png',
+      alt: 'Mental fitness illustration showing calm focus and wellbeing',
+      objectPosition: 'center center'
     },
     {
       src: 'https://static.vecteezy.com/system/resources/previews/047/790/662/non_2x/world-mental-health-day-girl-in-flowers-october-10th-illustration-of-a-girl-with-clear-thoughts-large-green-leaves-shades-green-brain-contour-is-calm-inscription-horizontally-vector.jpg',
