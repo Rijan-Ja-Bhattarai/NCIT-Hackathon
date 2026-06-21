@@ -435,6 +435,13 @@
   background-position: center;
   box-shadow: var(--shadow-soft);
 }
+.landing-slide__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
 /* landing-slide__body removed — slides are image-only now */
 .landing-slider__overlay {
   display: none; /* overlay removed; keep class in case referenced elsewhere */

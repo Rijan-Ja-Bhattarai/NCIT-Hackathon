@@ -46,8 +46,11 @@ function LandingSlider() {
             >
               <div
                 className="landing-slide__media"
-                style={slide.image ? { backgroundImage: `url('${slide.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
-              />
+              >
+                {slide.image ? (
+                  <img src={slide.image} alt={slide.title || slide.label || 'Slide image'} />
+                ) : null}
+              </div>
 
               {/* Removed text box: show image-only slides */}
 

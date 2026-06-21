@@ -26,19 +26,22 @@
       "type": "value",
       "label": "Core value",
       "title": "Your wellbeing comes first",
-      "description": "Every companion is designed to listen without judgment and meet you where you are."
+      "description": "Every companion is designed to listen without judgment and meet you where you are.",
+      "image": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1400&q=80"
     },
     {
       "type": "value",
       "label": "Core value",
       "title": "Safe space, always",
-      "description": "We believe mental health support should feel approachable — not clinical or intimidating."
+      "description": "We believe mental health support should feel approachable — not clinical or intimidating.",
+      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80"
     },
     {
       "type": "value",
       "label": "Core value",
       "title": "Growth at your pace",
-      "description": "Whether you need a laugh, a study session, or a quiet moment, you set the tone."
+      "description": "Whether you need a laugh, a study session, or a quiet moment, you set the tone.",
+      "image": "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1400&q=80"
     }
   ],
   "feedback": [
