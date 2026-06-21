@@ -19,10 +19,9 @@ function CharacterCard({ character, onSelect }) {
 
   return (
     <button className="char-card" onClick={() => onSelect(character.id)}>
-      <div
-        className={`char-card__banner ${art.image ? '' : 'char-card__banner--flat'}`}
-        style={art.image ? { backgroundImage: `url('${art.image}')` } : undefined}
-      />
+      <div className={`char-card__banner ${art.image ? '' : 'char-card__banner--flat'}`}>
+        {art.image ? <img src={art.image} alt={`${character.name} banner`} /> : null}
+      </div>
       <div className="char-card__body">
         <div className="char-card__avatar">
           {art.avatar ? (
