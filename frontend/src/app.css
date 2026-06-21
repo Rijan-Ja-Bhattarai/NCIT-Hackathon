@@ -746,7 +746,7 @@
 .landing-banner__viewport {
   position: relative;
   width: 100%;
-  height: 380px; /* increased height for better composition */
+  height: 520px; /* increased further per request */
   overflow: hidden;
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
@@ -793,7 +793,7 @@
 .landing-banner__dot--active { background: var(--primary); transform: scale(1.15); }
 
 @media (max-width: 760px) {
-  .landing-banner__viewport { height: 260px; }
+  .landing-banner__viewport { height: 360px; }
 }
 
 .landing-slider__track {
