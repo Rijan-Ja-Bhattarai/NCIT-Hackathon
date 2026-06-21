@@ -25,12 +25,12 @@ function BannerSlider() {
       alt: 'Person meditating peacefully indoors with soft light',
     },
     {
-      src: 'https://previews.123rf.com/images/stockgiu/stockgiu1711/stockgiu171100633/89538381-brain-cartoon-of-mental-health-theme-isolated-design-vector-illustration.jpg',
-      alt: 'Illustration of a brain representing mental health and wellbeing',
+      src: 'https://static.vecteezy.com/system/resources/previews/047/790/662/non_2x/world-mental-health-day-girl-in-flowers-october-10th-illustration-of-a-girl-with-clear-thoughts-large-green-leaves-shades-green-brain-contour-is-calm-inscription-horizontally-vector.jpg',
+      alt: 'Illustration for World Mental Health Day: girl surrounded by calming leaves and flowers',
     },
     {
-      src: 'https://cmha.ca/wp-content/uploads/2023/03/MicrosoftTeams-image-5.png',
-      alt: 'Supportive group and mental health resources illustration',
+      src: 'https://img.magnific.com/free-vector/hand-drawn-happy-black-woman-illustration_23-2149404965.jpg?semt=ais_hybrid&w=740&q=80',
+      alt: 'Hand-drawn happy woman illustration conveying positive mental wellbeing',
     },
   ]
 
