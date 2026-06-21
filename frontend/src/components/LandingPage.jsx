@@ -16,84 +16,6 @@ function resolveCharacterArt(character) {
   }
 }
 
-function LandingSlider() {
-  const slides = siteConfig.sliderSlides
-  const [active, setActive] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [slides.length])
-
-  // keyboard navigation (left/right arrows)
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'ArrowLeft') prev()
-      if (e.key === 'ArrowRight') next()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [slides.length])
-
-  function prev() {
-    setActive((s) => (s - 1 + slides.length) % slides.length)
-  }
-  function next() {
-    setActive((s) => (s + 1) % slides.length)
-  }
-
-  return (
-    <section className="landing-slider" aria-label="Highlights" tabIndex={0}>
-      <div className="landing-slider__inner">
-        <div className="landing-slider__track" style={{ transform: `translateX(-${active * 100}%)`, width: `${slides.length * 100}%` }}>
-          {slides.map((slide, idx) => (
-            <div
-              className="landing-slider__slide"
-              key={idx}
-              aria-hidden={idx !== active}
-            >
-              <div className="landing-slide__media">
-                {slide.image ? (
-                  <img src={slide.image} alt={slide.alt || slide.title || slide.label || 'Slide image'} />
-                ) : null}
-              </div>
-
-              {/* Image-only slides; textual metadata lives in siteConfig for accessibility */}
-
-            </div>
-          ))}
-        </div>
-
-        {/* Navigation arrows stay inside the inner container so they remain visually attached to the slider */}
-        <button className="landing-slider__nav landing-slider__nav--prev" aria-label="Previous slide" onClick={prev}>
-          ‹
-        </button>
-        <button className="landing-slider__nav landing-slider__nav--next" aria-label="Next slide" onClick={next}>
-          ›
-        </button>
-      </div>
-
-      {/* Pagination dots are placed outside the image container (below) so they never overlay imagery */}
-      <div className="landing-slider__controls" aria-hidden={false}>
-        <div className="landing-slider__dots" role="tablist" aria-label="Slide navigation">
-          {slides.map((item, index) => (
-            <button
-              key={item.title || index}
-              type="button"
-              role="tab"
-              aria-selected={index === active}
-              aria-label={`Slide ${index + 1}: ${item.title || item.label || 'Slide'}`}
-              className={`landing-slider__dot${index === active ? ' landing-slider__dot--active' : ''}`}
-              onClick={() => setActive(index)}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 
 function CompanionCard({ character, ctaTo }) {
@@ -163,8 +85,7 @@ export default function LandingPage() {
         </div>
       </header>
 
-      <LandingSlider />
-
+      
       <main className="landing-hero">
         <p className="eyebrow">a quiet place to talk</p>
         <h1 className="landing-hero__title">
